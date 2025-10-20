@@ -1,7 +1,17 @@
-FROM node:18
+FROM node:18-alpine
 
-RUN adduser -D -u 1000 appuser
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+RUN adduser -D appuser
 
 USER appuser
 
-EXPOSE 3000
+CMD ["node", "server.js"]
