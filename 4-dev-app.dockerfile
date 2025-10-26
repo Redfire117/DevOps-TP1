@@ -2,11 +2,11 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY broken-app/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY broken-app/ .
 
 EXPOSE 3000
 
