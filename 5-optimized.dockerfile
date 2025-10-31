@@ -11,4 +11,8 @@ RUN go build -o server .
 
 EXPOSE 8080
 
+RUN adduser -u 1000 appuser
+
+USER appuser
+
 CMD ["./server"]
