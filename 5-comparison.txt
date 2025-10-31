@@ -1,2 +1,3 @@
 before : 1,29GB
+after1 : 435,37MB
 after : 
