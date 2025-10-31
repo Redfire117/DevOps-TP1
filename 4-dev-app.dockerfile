@@ -10,8 +10,6 @@ COPY broken-app/ .
 
 EXPOSE 3000
 
-RUN adduser -D appuser
-
-USER appuser
+USER node
 
 CMD ["node", "server.js"]
