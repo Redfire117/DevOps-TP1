@@ -17,7 +17,7 @@ COPY --from=builder /app/server .
 
 EXPOSE 8080
 
-RUN adduser -u 1000 appuser
+RUN adduser -D appuser
 
 USER appuser
 
